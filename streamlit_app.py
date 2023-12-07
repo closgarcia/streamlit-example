@@ -32,6 +32,8 @@ def Music_Recommender(song_list, n_songs=10):
     # Your existing code for recommendation
 # Your existing code...
 
+# Your existing code...
+
 # Streamlit app code
 def main():
     st.title("Music Recommender App")
@@ -54,4 +56,5 @@ def main():
 # Ensure this block is not indented
 if __name__ == "__main__":
     main()
+
 
