@@ -36,22 +36,22 @@ def Music_Recommender(song_list, n_songs=10):
 
 # Streamlit app code
 def main():
-    st.title("Music Recommender App")
-    st.sidebar.header("Input Songs")
+            st.title("Music Recommender App")
+            st.sidebar.header("Input Songs")
 
-    # Get user input for songs
-    song_name = st.sidebar.text_input("Enter Song Name:")
-    song_year = st.sidebar.number_input("Enter Year:", min_value=1920, max_value=2023, step=1)
-    
-    # Create a list of user-input songs
-    user_songs = [{'name': song_name, 'year': int(song_year)}]
-
-    # Call the Music_Recommender function
-    recommendations = Music_Recommender(user_songs)
-
-    # Display the recommendations
-    st.subheader("Recommendations:")
-    st.table(recommendations)
+            # Get user input for songs
+            song_name = st.sidebar.text_input("Enter Song Name:")
+            song_year = st.sidebar.number_input("Enter Year:", min_value=1920, max_value=2023, step=1)
+                
+            # Create a list of user-input songs
+            user_songs = [{'name': song_name, 'year': int(song_year)}]
+            
+            # Call the Music_Recommender function
+            recommendations = Music_Recommender(user_songs)
+            
+            # Display the recommendations
+            st.subheader("Recommendations:")
+            st.table(recommendations)
 
 # Ensure this block is not indented
 if __name__ == "__main__":
