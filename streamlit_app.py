@@ -1,7 +1,27 @@
 # Your existing code for clustering, input_preprocessor, and Music_Recommender functions
 
+# Your existing code...
+
+# Create a pipeline with StandardScaler and KMeans
+song_cluster_pipeline = Pipeline([
+    ('scaler', StandardScaler()),
+    ('kmeans', KMeans(n_clusters=8, verbose=2))
+], verbose=True)
+
+# Check for missing values in the dataset
+if tracks_df[features].isnull().any().any():
+    raise ValueError("Dataset contains missing values. Please handle or remove them.")
+
+# Check if all columns in 'features' are present in the dataset
+missing_columns = set(features) - set(tracks_df.columns)
+if missing_columns:
+    raise ValueError(f"Dataset is missing the following columns: {missing_columns}")
+
 # Fit the clustering model to your data
 song_cluster_pipeline.fit(tracks_df[features])
+
+# Your existing code...
+
 
 # Function to preprocess input and recommend songs
 def Music_Recommender(song_list, n_songs=10):
