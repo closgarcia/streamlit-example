@@ -30,6 +30,7 @@ song_cluster_pipeline = Pipeline([
 # Function to preprocess input and recommend songs
 def Music_Recommender(song_list, n_songs=10):
     # Your existing code for recommendation
+# Your existing code...
 
 # Streamlit app code
 def main():
@@ -50,6 +51,7 @@ def main():
     st.subheader("Recommendations:")
     st.table(recommendations)
 
+# Ensure this block is not indented
 if __name__ == "__main__":
     main()
 
